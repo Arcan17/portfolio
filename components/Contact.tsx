@@ -1,39 +1,43 @@
+"use client";
+
 import { Mail } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 import { SectionHeader } from "./Projects";
 
-const links = [
-  {
-    label: "GitHub",
-    value: "github.com/Arcan17",
-    href: "https://github.com/Arcan17",
-    icon: <GithubIcon />,
-    color: "hover:border-slate-500 hover:text-white",
-  },
-  {
-    label: "LinkedIn",
-    value: "Bastian Altamirano",
-    href: "https://www.linkedin.com/in/bastian-altamirano-3805b4309/",
-    icon: <LinkedinIcon />,
-    color: "hover:border-blue-500 hover:text-blue-400",
-  },
-  {
-    label: "Email",
-    value: "mixtape.bast@gmail.com",
-    href: "mailto:mixtape.bast@gmail.com",
-    icon: <Mail size={20} />,
-    color: "hover:border-emerald-500 hover:text-emerald-400",
-  },
-];
+const EMAIL = "bast-1996@hotmail.com";
 
 export default function Contact() {
+  const { t } = useLanguage();
+  const c = t.contact;
+
+  const links = [
+    {
+      label: "GitHub",
+      value: "github.com/Arcan17",
+      href: "https://github.com/Arcan17",
+      icon: <GithubIcon />,
+      color: "hover:border-slate-500 hover:text-white",
+    },
+    {
+      label: "LinkedIn",
+      value: "Bastian Altamirano",
+      href: "https://www.linkedin.com/in/bastian-altamirano-3805b4309/",
+      icon: <LinkedinIcon />,
+      color: "hover:border-blue-500 hover:text-blue-400",
+    },
+    {
+      label: "Email",
+      value: EMAIL,
+      href: `mailto:${EMAIL}`,
+      icon: <Mail size={20} />,
+      color: "hover:border-emerald-500 hover:text-emerald-400",
+    },
+  ];
+
   return (
     <section id="contact" className="section-padding bg-[#0a0e18]">
       <div className="max-w-6xl mx-auto px-6">
-        <SectionHeader
-          tag="Get in touch"
-          title="Contact"
-          subtitle="Open to freelance projects on Workana and Upwork. Let's talk about what you need to build."
-        />
+        <SectionHeader tag={c.tag} title={c.title} subtitle={c.subtitle} />
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
           {links.map((l) => (
@@ -57,9 +61,7 @@ export default function Contact() {
           ))}
         </div>
 
-        <p className="mt-10 text-center text-sm text-slate-600">
-          Available for remote freelance work · Python · FastAPI · AI tools
-        </p>
+        <p className="mt-10 text-center text-sm text-slate-600">{c.availability}</p>
       </div>
     </section>
   );

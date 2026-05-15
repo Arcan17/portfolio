@@ -1,6 +1,12 @@
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+"use client";
+
+import { ArrowDown } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
+  const h = t.hero;
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background grid */}
@@ -12,7 +18,6 @@ export default function Hero() {
           backgroundSize: "60px 60px",
         }}
       />
-
       {/* Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -20,32 +25,22 @@ export default function Hero() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-8">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          Available for freelance projects
+          {h.badge}
         </div>
 
         {/* Headline */}
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
-          Python Backend Developer{" "}
-          <span className="gradient-text block mt-1">
-            building automation, data processing and AI-powered tools.
-          </span>
+          {h.headline1}{" "}
+          <span className="gradient-text block mt-1">{h.headline2}</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          I build{" "}
-          <span className="text-slate-200 font-medium">FastAPI backends</span>,{" "}
-          <span className="text-slate-200 font-medium">
-            CSV/Excel automation workflows
-          </span>
-          ,{" "}
-          <span className="text-slate-200 font-medium">data dashboards</span>,
-          and{" "}
-          <span className="text-slate-200 font-medium">
-            AI chatbots with RAG over documents
-          </span>
-          .
-        </p>
+        <p
+          className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
+          dangerouslySetInnerHTML={{
+            __html: h.sub.replace(/<b>/g, '<strong class="text-slate-200 font-medium">').replace(/<\/b>/g, "</strong>"),
+          }}
+        />
 
         {/* Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-3">
@@ -53,13 +48,13 @@ export default function Hero() {
             href="#projects"
             className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-colors shadow-lg shadow-blue-600/20"
           >
-            View Projects
+            {h.btnProjects}
           </a>
           <a
             href="#contact"
             className="px-6 py-3 rounded-lg border border-slate-600 hover:border-blue-500 text-slate-300 hover:text-white font-semibold text-sm transition-colors"
           >
-            Contact Me
+            {h.btnContact}
           </a>
           <a
             href="https://github.com/Arcan17"
@@ -83,22 +78,9 @@ export default function Hero() {
 
         {/* Tech pills */}
         <div className="mt-14 flex flex-wrap justify-center gap-2 text-xs text-slate-500">
-          {[
-            "Python",
-            "FastAPI",
-            "LangChain",
-            "OpenAI",
-            "ChromaDB",
-            "Streamlit",
-            "SQLAlchemy",
-            "Docker",
-            "GitHub Actions",
-          ].map((t) => (
-            <span
-              key={t}
-              className="px-3 py-1 rounded-full border border-[#1e2d45] bg-[#0f1623]"
-            >
-              {t}
+          {["Python","FastAPI","LangChain","OpenAI","ChromaDB","Streamlit","SQLAlchemy","Docker","GitHub Actions"].map((tech) => (
+            <span key={tech} className="px-3 py-1 rounded-full border border-[#1e2d45] bg-[#0f1623]">
+              {tech}
             </span>
           ))}
         </div>

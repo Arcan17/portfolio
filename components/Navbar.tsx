@@ -2,23 +2,25 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-
-const links = [
-  { label: "Projects", href: "#projects" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { lang, toggle, t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const links = [
+    { label: t.nav.projects, href: "#projects" },
+    { label: t.nav.services, href: "#services" },
+    { label: t.nav.about, href: "#about" },
+    { label: t.nav.contact, href: "#contact" },
+  ];
 
   return (
     <nav
@@ -38,7 +40,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {links.map((l) => (
             <a
               key={l.href}
@@ -48,6 +50,18 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
+
+          {/* Language toggle */}
+          <button
+            onClick={toggle}
+            className="flex items-center gap-1 px-3 py-1.5 rounded-lg border border-[#1e2d45] text-xs font-bold text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
+            aria-label="Toggle language"
+          >
+            <span className={lang === "en" ? "text-white" : "text-slate-500"}>EN</span>
+            <span className="text-slate-600 mx-0.5">|</span>
+            <span className={lang === "es" ? "text-white" : "text-slate-500"}>ES</span>
+          </button>
+
           <a
             href="https://github.com/Arcan17"
             target="_blank"
@@ -59,13 +73,21 @@ export default function Navbar() {
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden text-slate-400 hover:text-white"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="md:hidden flex items-center gap-3">
+          <button
+            onClick={toggle}
+            className="px-2.5 py-1 rounded border border-[#1e2d45] text-xs font-bold text-slate-400"
+          >
+            {lang === "en" ? "ES" : "EN"}
+          </button>
+          <button
+            className="text-slate-400 hover:text-white"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

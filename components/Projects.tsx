@@ -1,56 +1,22 @@
+"use client";
+
 import Image from "next/image";
-import { ExternalLink, Github, Tag } from "lucide-react";
+import { ExternalLink, Tag } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
-interface Project {
-  title: string;
-  description: string;
-  tech: string[];
-  github: string;
-  release: string;
-  screenshot: string;
-  screenshotAlt: string;
-  badge: string;
-}
-
-const projects: Project[] = [
+const projectMeta = [
   {
-    title: "AI Support Bot",
-    description:
-      "AI chatbot API with multi-turn memory and RAG over uploaded documents. Users upload TXT, PDF or CSV files, ask questions and receive answers with cited sources. Built with FastAPI, LangChain, OpenAI and ChromaDB. Includes a Streamlit demo UI, sample FAQ and 58 automated tests.",
-    tech: [
-      "FastAPI",
-      "LangChain",
-      "OpenAI",
-      "ChromaDB",
-      "SQLite",
-      "Streamlit",
-      "Docker",
-      "GitHub Actions",
-    ],
+    tech: ["FastAPI","LangChain","OpenAI","ChromaDB","SQLite","Streamlit","Docker","GitHub Actions"],
     github: "https://github.com/Arcan17/ai-support-bot",
     release: "https://github.com/Arcan17/ai-support-bot/releases/tag/v2.0.1",
-    screenshot:
-      "https://raw.githubusercontent.com/Arcan17/ai-support-bot/main/docs/screenshots/chat-with-rag.png",
-    screenshotAlt:
-      "AI Support Bot — chat interface showing RAG response with cited sources",
+    screenshot: "https://raw.githubusercontent.com/Arcan17/ai-support-bot/main/docs/screenshots/chat-with-rag.png",
+    screenshotAlt: "AI Support Bot — chat interface showing RAG response with cited sources",
     badge: "v2.0.1",
   },
   {
-    title: "Automation Toolkit",
-    description:
-      "Full-stack data automation platform. Upload CSV/Excel files, clean data automatically — remove duplicates, fix missing values, normalize formats — generate Excel reports and schedule recurring tasks with optional alerts. Production-ready with FastAPI backend, Streamlit dashboard and Docker support.",
-    tech: [
-      "FastAPI",
-      "Streamlit",
-      "Polars",
-      "SQLAlchemy",
-      "APScheduler",
-      "Docker",
-      "GitHub Actions",
-    ],
+    tech: ["FastAPI","Streamlit","Polars","SQLAlchemy","APScheduler","Docker","GitHub Actions"],
     github: "https://github.com/Arcan17/automation-toolkit",
-    release:
-      "https://github.com/Arcan17/automation-toolkit/releases/tag/v1.0.0",
+    release: "https://github.com/Arcan17/automation-toolkit/releases/tag/v1.0.0",
     screenshot: "",
     screenshotAlt: "Automation Toolkit — data processing dashboard",
     badge: "v1.0.0",
@@ -71,137 +37,99 @@ const techColors: Record<string, string> = {
   APScheduler: "bg-purple-500/10 text-purple-400 border-purple-500/20",
 };
 
-function TechBadge({ label }: { label: string }) {
-  const cls =
-    techColors[label] ?? "bg-slate-500/10 text-slate-400 border-slate-500/20";
-  return (
-    <span
-      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${cls}`}
-    >
-      {label}
-    </span>
-  );
-}
-
-function ProjectCard({ project }: { project: Project }) {
-  return (
-    <div className="flex flex-col rounded-2xl border border-[#1e2d45] bg-[#0f1623] overflow-hidden card-hover">
-      {/* Screenshot */}
-      <div className="relative w-full aspect-[16/9] bg-[#080b12] overflow-hidden">
-        {project.screenshot ? (
-          <Image
-            src={project.screenshot}
-            alt={project.screenshotAlt}
-            fill
-            className="object-cover object-top"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-slate-600">
-            <div className="w-16 h-16 rounded-xl border-2 border-dashed border-[#1e2d45] flex items-center justify-center">
-              <Tag size={24} className="text-slate-700" />
-            </div>
-            <span className="text-sm">Screenshot coming soon</span>
-          </div>
-        )}
-        {/* Version badge */}
-        <div className="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur text-xs font-mono text-slate-300 border border-white/10">
-          {project.badge}
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="flex flex-col flex-1 p-6 gap-4">
-        <h3 className="text-xl font-bold text-white">{project.title}</h3>
-        <p className="text-sm text-slate-400 leading-relaxed flex-1">
-          {project.description}
-        </p>
-
-        {/* Tech badges */}
-        <div className="flex flex-wrap gap-1.5">
-          {project.tech.map((t) => (
-            <TechBadge key={t} label={t} />
-          ))}
-        </div>
-
-        {/* Links */}
-        <div className="flex items-center gap-3 pt-2 border-t border-[#1e2d45]">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors font-medium"
-          >
-            <GithubIcon />
-            GitHub
-          </a>
-          <span className="text-[#1e2d45]">|</span>
-          <a
-            href={project.release}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm text-blue-400 hover:text-blue-300 transition-colors font-medium"
-          >
-            <ExternalLink size={14} />
-            Release
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default function Projects() {
-  return (
-    <section id="projects" className="section-padding">
-      <div className="max-w-6xl mx-auto px-6">
-        <SectionHeader
-          tag="Work"
-          title="Projects"
-          subtitle="Production-grade tools built with modern Python and AI — open source and documented."
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-          {projects.map((p) => (
-            <ProjectCard key={p.title} project={p} />
-          ))}
-        </div>
-
-        <div className="mt-8 text-center">
-          <a
-            href="https://github.com/Arcan17"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 transition-colors"
-          >
-            <GithubIcon />
-            More on GitHub
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function SectionHeader({
-  tag,
-  title,
-  subtitle,
-}: {
-  tag: string;
-  title: string;
-  subtitle: string;
-}) {
+export function SectionHeader({ tag, title, subtitle }: { tag: string; title: string; subtitle: string }) {
   return (
     <div className="text-center">
       <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase text-blue-400 bg-blue-500/10 border border-blue-500/20 mb-4">
         {tag}
       </span>
-      <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-        {title}
-      </h2>
+      <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">{title}</h2>
       <p className="text-slate-400 max-w-xl mx-auto text-base">{subtitle}</p>
     </div>
+  );
+}
+
+export default function Projects() {
+  const { t } = useLanguage();
+  const p = t.projects;
+
+  return (
+    <section id="projects" className="section-padding">
+      <div className="max-w-6xl mx-auto px-6">
+        <SectionHeader tag={p.tag} title={p.title} subtitle={p.subtitle} />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+          {projectMeta.map((meta, i) => {
+            const item = p.items[i];
+            return (
+              <div key={item.title} className="flex flex-col rounded-2xl border border-[#1e2d45] bg-[#0f1623] overflow-hidden card-hover">
+                {/* Screenshot */}
+                <div className="relative w-full aspect-[16/9] bg-[#080b12] overflow-hidden">
+                  {meta.screenshot ? (
+                    <Image
+                      src={meta.screenshot}
+                      alt={meta.screenshotAlt}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-slate-600">
+                      <div className="w-16 h-16 rounded-xl border-2 border-dashed border-[#1e2d45] flex items-center justify-center">
+                        <Tag size={24} className="text-slate-700" />
+                      </div>
+                      <span className="text-sm">{p.screenshotSoon}</span>
+                    </div>
+                  )}
+                  <div className="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur text-xs font-mono text-slate-300 border border-white/10">
+                    {meta.badge}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex flex-col flex-1 p-6 gap-4">
+                  <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                  <p className="text-sm text-slate-400 leading-relaxed flex-1">{item.description}</p>
+
+                  <div className="flex flex-wrap gap-1.5">
+                    {meta.tech.map((tech) => {
+                      const cls = techColors[tech] ?? "bg-slate-500/10 text-slate-400 border-slate-500/20";
+                      return (
+                        <span key={tech} className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${cls}`}>
+                          {tech}
+                        </span>
+                      );
+                    })}
+                  </div>
+
+                  <div className="flex items-center gap-3 pt-2 border-t border-[#1e2d45]">
+                    <a href={meta.github} target="_blank" rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors font-medium">
+                      <GithubIcon />
+                      {p.githubLabel}
+                    </a>
+                    <span className="text-[#1e2d45]">|</span>
+                    <a href={meta.release} target="_blank" rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-sm text-blue-400 hover:text-blue-300 transition-colors font-medium">
+                      <ExternalLink size={14} />
+                      {p.releaseLabel}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-8 text-center">
+          <a href="https://github.com/Arcan17" target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-300 transition-colors">
+            <GithubIcon />
+            {p.moreGithub}
+          </a>
+        </div>
+      </div>
+    </section>
   );
 }
 

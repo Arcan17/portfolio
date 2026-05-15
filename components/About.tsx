@@ -1,82 +1,54 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
 import { SectionHeader } from "./Projects";
 
-const stack = [
-  { category: "Backend", items: ["Python", "FastAPI", "SQLAlchemy", "Pydantic"] },
-  { category: "AI / Data", items: ["LangChain", "OpenAI", "ChromaDB", "Polars"] },
-  { category: "Frontend", items: ["Streamlit", "Next.js", "Tailwind CSS"] },
-  { category: "DevOps", items: ["Docker", "GitHub Actions", "Vercel"] },
+const stackItems = [
+  ["Python", "FastAPI", "SQLAlchemy", "Pydantic"],
+  ["LangChain", "OpenAI", "ChromaDB", "Polars"],
+  ["Streamlit", "Next.js", "Tailwind CSS"],
+  ["Docker", "GitHub Actions", "Vercel"],
 ];
 
 export default function About() {
+  const { t } = useLanguage();
+  const a = t.about;
+
   return (
     <section id="about" className="section-padding">
       <div className="max-w-6xl mx-auto px-6">
-        <SectionHeader
-          tag="Background"
-          title="About me"
-          subtitle="Python developer focused on building practical, production-ready tools."
-        />
+        <SectionHeader tag={a.tag} title={a.title} subtitle={a.subtitle} />
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* Text */}
           <div className="space-y-5 text-slate-400 leading-relaxed">
-            <p>
-              I am a Python backend developer focused on practical automation
-              tools, APIs, data workflows and AI-powered systems. I build
-              portfolio-ready and client-ready solutions using{" "}
-              <span className="text-slate-200 font-medium">FastAPI</span>,{" "}
-              <span className="text-slate-200 font-medium">Streamlit</span>, SQL
-              databases, Docker and modern AI APIs.
-            </p>
-            <p>
-              My work centers on solving real business problems: automating
-              repetitive data tasks, building chatbots that answer questions over
-              internal documents, and exposing clean APIs that integrate with
-              existing systems.
-            </p>
-            <p>
-              Every project I ship includes documentation, tests and a clear
-              README — because production code needs to be maintainable, not just
-              functional.
-            </p>
+            <p>{a.p1}</p>
+            <p>{a.p2}</p>
+            <p>{a.p3}</p>
             <div className="flex flex-wrap gap-3 pt-2">
-              <a
-                href="https://github.com/Arcan17"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#1e2d45] text-sm text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
-              >
+              <a href="https://github.com/Arcan17" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#1e2d45] text-sm text-slate-400 hover:text-white hover:border-blue-500 transition-colors">
                 <GithubIcon />
-                GitHub profile
+                {a.btnGithub}
               </a>
-              <a
-                href="https://www.linkedin.com/in/bastian-altamirano-3805b4309/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#1e2d45] text-sm text-slate-400 hover:text-blue-400 hover:border-blue-500 transition-colors"
-              >
+              <a href="https://www.linkedin.com/in/bastian-altamirano-3805b4309/" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#1e2d45] text-sm text-slate-400 hover:text-blue-400 hover:border-blue-500 transition-colors">
                 <LinkedinIcon />
-                LinkedIn
+                {a.btnLinkedin}
               </a>
             </div>
           </div>
 
           {/* Stack grid */}
           <div className="grid grid-cols-2 gap-4">
-            {stack.map((s) => (
-              <div
-                key={s.category}
-                className="p-4 rounded-xl border border-[#1e2d45] bg-[#0f1623]"
-              >
+            {stackItems.map((items, i) => (
+              <div key={i} className="p-4 rounded-xl border border-[#1e2d45] bg-[#0f1623]">
                 <p className="text-xs font-semibold tracking-widest uppercase text-blue-400 mb-3">
-                  {s.category}
+                  {a.stackCategories[i]}
                 </p>
                 <ul className="space-y-1.5">
-                  {s.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-2 text-sm text-slate-300"
-                    >
+                  {items.map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-sm text-slate-300">
                       <span className="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
                       {item}
                     </li>
