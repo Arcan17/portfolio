@@ -6,6 +6,14 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const projectMeta = [
   {
+    tech: ["Django","DRF","PostgreSQL","Celery","Redis","JWT","pytest","Docker","GitHub Actions"],
+    github: "https://github.com/Arcan17/peopleops-workflow-api",
+    release: "https://github.com/Arcan17/peopleops-workflow-api/releases/tag/v1.0.0",
+    screenshot: "https://raw.githubusercontent.com/Arcan17/peopleops-workflow-api/main/docs/images/swagger_ui.png",
+    screenshotAlt: "PeopleOps Workflow API — Swagger UI showing HR endpoints",
+    badge: "v1.0.0",
+  },
+  {
     tech: ["FastAPI","LangChain","OpenAI","ChromaDB","SQLite","Streamlit","Docker","GitHub Actions"],
     github: "https://github.com/Arcan17/ai-support-bot",
     release: "https://github.com/Arcan17/ai-support-bot/releases/tag/v2.0.1",
@@ -25,6 +33,13 @@ const projectMeta = [
 
 const techColors: Record<string, string> = {
   FastAPI: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+  Django: "bg-green-500/10 text-green-400 border-green-500/20",
+  DRF: "bg-red-500/10 text-red-400 border-red-500/20",
+  PostgreSQL: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  Celery: "bg-lime-500/10 text-lime-400 border-lime-500/20",
+  Redis: "bg-rose-500/10 text-rose-400 border-rose-500/20",
+  JWT: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
+  pytest: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
   LangChain: "bg-violet-500/10 text-violet-400 border-violet-500/20",
   OpenAI: "bg-sky-500/10 text-sky-400 border-sky-500/20",
   ChromaDB: "bg-orange-500/10 text-orange-400 border-orange-500/20",
@@ -58,7 +73,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-6">
         <SectionHeader tag={p.tag} title={p.title} subtitle={p.subtitle} />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {projectMeta.map((meta, i) => {
             const item = p.items[i];
             return (

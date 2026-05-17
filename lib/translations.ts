@@ -12,7 +12,7 @@ const translations = {
       badge: "Available for freelance projects",
       headline1: "Python Backend Developer",
       headline2: "building automation, data processing and AI-powered tools.",
-      sub: "I build <b>FastAPI backends</b>, <b>CSV/Excel automation workflows</b>, <b>data dashboards</b>, and <b>AI chatbots with RAG over documents</b>.",
+      sub: "I build <b>Django &amp; FastAPI backends</b>, <b>HR workflow APIs</b>, <b>data automation pipelines</b>, and <b>AI chatbots with RAG over documents</b>.",
       btnProjects: "View Projects",
       btnContact: "Contact Me",
     },
@@ -26,6 +26,11 @@ const translations = {
       githubLabel: "GitHub",
       releaseLabel: "Release",
       items: [
+        {
+          title: "PeopleOps Workflow API",
+          description:
+            "Production-grade HR workflow API built with Django REST Framework. Manages the full lifecycle of employee requests: creation, approval and rejection with role-based access control (admin / manager / employee). Includes JWT auth, Celery async tasks, PostgreSQL, magic-bytes file validation, aggregated reports with CSV export and 89 automated tests at 92% coverage.",
+        },
         {
           title: "AI Support Bot",
           description:
@@ -87,7 +92,7 @@ const translations = {
       title: "About me",
       subtitle:
         "Python developer focused on building practical, production-ready tools.",
-      p1: "I am a Python backend developer focused on practical automation tools, APIs, data workflows and AI-powered systems. I build portfolio-ready and client-ready solutions using FastAPI, Streamlit, SQL databases, Docker and modern AI APIs.",
+      p1: "I am a Python backend developer focused on practical automation tools, APIs, data workflows and AI-powered systems. I build portfolio-ready and client-ready solutions using Django REST Framework, FastAPI, PostgreSQL, Celery, Docker and modern AI APIs.",
       p2: "My work centers on solving real business problems: automating repetitive data tasks, building chatbots that answer questions over internal documents, and exposing clean APIs that integrate with existing systems.",
       p3: "Every project I ship includes documentation, tests and a clear README — because production code needs to be maintainable, not just functional.",
       btnGithub: "GitHub profile",
@@ -119,7 +124,7 @@ const translations = {
       headline1: "Python Backend Developer",
       headline2:
         "construyendo automatización, procesamiento de datos y herramientas con IA.",
-      sub: "Construyo <b>backends con FastAPI</b>, <b>flujos de automatización CSV/Excel</b>, <b>dashboards de datos</b> y <b>chatbots de IA con RAG sobre documentos</b>.",
+      sub: "Construyo <b>backends con Django y FastAPI</b>, <b>APIs de gestión de RRHH</b>, <b>pipelines de automatización de datos</b> y <b>chatbots de IA con RAG sobre documentos</b>.",
       btnProjects: "Ver Proyectos",
       btnContact: "Contactar",
     },
@@ -133,6 +138,11 @@ const translations = {
       githubLabel: "GitHub",
       releaseLabel: "Release",
       items: [
+        {
+          title: "PeopleOps Workflow API",
+          description:
+            "API de RRHH de nivel productivo construida con Django REST Framework. Gestiona el ciclo completo de solicitudes de empleados: creación, aprobación y rechazo con control de acceso por roles (admin / manager / empleado). Incluye auth JWT, tareas async con Celery, PostgreSQL, validación de archivos por magic bytes, reportes con exportación CSV y 89 tests automatizados con 92% de cobertura.",
+        },
         {
           title: "AI Support Bot",
           description:
@@ -194,7 +204,7 @@ const translations = {
       title: "Sobre mí",
       subtitle:
         "Desarrollador Python enfocado en construir herramientas prácticas y listas para producción.",
-      p1: "Soy un desarrollador backend Python enfocado en herramientas prácticas de automatización, APIs, flujos de datos y sistemas impulsados por IA. Construyo soluciones listas para portafolio y clientes usando FastAPI, Streamlit, bases de datos SQL, Docker y APIs modernas de IA.",
+      p1: "Soy un desarrollador backend Python enfocado en herramientas prácticas de automatización, APIs, flujos de datos y sistemas impulsados por IA. Construyo soluciones listas para portafolio y clientes usando Django REST Framework, FastAPI, PostgreSQL, Celery, Docker y APIs modernas de IA.",
       p2: "Mi trabajo se centra en resolver problemas reales de negocio: automatizar tareas de datos repetitivas, construir chatbots que respondan preguntas sobre documentos internos y exponer APIs limpias que se integren con sistemas existentes.",
       p3: "Cada proyecto que entrego incluye documentación, tests y un README claro — porque el código de producción necesita ser mantenible, no solo funcional.",
       btnGithub: "Perfil en GitHub",
