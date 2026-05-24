@@ -62,43 +62,43 @@ const translations = {
       tag: "What I build",
       title: "Services",
       subtitle:
-        "Practical, client-ready solutions for automation, data and AI use cases.",
+        "From a single automation script to a full backend system — I build things that actually ship.",
       items: [
         {
-          icon: "⚡",
-          title: "Python API Development",
+          icon: "🤖",
+          title: "Multi-Agent AI Pipelines",
           description:
-            "Production-ready REST APIs with FastAPI — async, validated, documented with Swagger. SQLite, PostgreSQL or any SQL backend.",
+            "Autonomous research and processing workflows built with LangGraph. Agents that plan, search the web, analyse, self-critique and write — with human approval gates and real-time streaming.",
         },
         {
-          icon: "🤖",
-          title: "AI Chatbots with RAG",
+          icon: "⚡",
+          title: "Backend APIs",
           description:
-            "Chatbots that answer questions over your documents using LangChain, OpenAI and ChromaDB. Multi-turn memory, source citations.",
+            "Production REST APIs with Django REST Framework or FastAPI — role-based access, JWT auth, PostgreSQL, async tasks with Celery and full Swagger documentation.",
+        },
+        {
+          icon: "🔒",
+          title: "Privacy-Preserving RAG",
+          description:
+            "Document Q&A systems that strip PII before it reaches the LLM. RUT, email and phone detection, semantic chunking, ChromaDB vector search and response caching.",
         },
         {
           icon: "📊",
-          title: "Data Automation",
+          title: "Data Automation & ETL",
           description:
-            "End-to-end data pipelines — ingest, transform, validate and export. Scheduled tasks, alerts and Streamlit dashboards.",
-        },
-        {
-          icon: "📁",
-          title: "Excel / CSV Processing",
-          description:
-            "Automated reports, cleaning workflows, deduplication, format normalization and Excel generation with Python and Polars.",
+            "End-to-end pipelines that ingest, clean, transform and export your data. Scheduled tasks, multi-channel alerts (Telegram, Email, WhatsApp) and Streamlit dashboards.",
         },
         {
           icon: "🕷️",
-          title: "Web Scraping & Data Pipelines",
+          title: "Web Scraping & Reporting",
           description:
-            "Scraping with BeautifulSoup or Playwright, structured data extraction, storage and scheduled runs with Docker.",
+            "Automated data collection with anti-bot fingerprinting, normalization with Polars, storage in PostgreSQL or DuckDB, and Excel/CSV exports ready to share.",
         },
         {
           icon: "🔗",
           title: "Bot & API Integrations",
           description:
-            "Telegram bots, WhatsApp webhooks, Slack integrations and third-party API connectors for business automation.",
+            "Telegram bots, WhatsApp webhooks and third-party API connectors that plug into your existing systems and automate repetitive business tasks.",
         },
       ],
     },
@@ -118,9 +118,9 @@ const translations = {
       tag: "Get in touch",
       title: "Contact",
       subtitle:
-        "Open to freelance projects on Workana and Upwork. Let's talk about what you need to build.",
+        "Open to full-time backend/AI roles and freelance projects. Let's talk about what you need to build.",
       availability:
-        "Available for remote freelance work · Python · FastAPI · AI tools",
+        "Available for remote work · Full-time or freelance · Python · Django · FastAPI · AI",
     },
     footer: {
       copyright: "Bastian Altamirano",
@@ -189,43 +189,43 @@ const translations = {
       tag: "Qué construyo",
       title: "Servicios",
       subtitle:
-        "Soluciones prácticas y listas para clientes en automatización, datos e IA.",
+        "Desde un script de automatización hasta un sistema backend completo — construyo cosas que realmente se despliegan.",
       items: [
         {
-          icon: "⚡",
-          title: "Desarrollo de APIs Python",
+          icon: "🤖",
+          title: "Pipelines Multi-Agente con IA",
           description:
-            "APIs REST listas para producción con FastAPI — async, validadas, documentadas con Swagger. SQLite, PostgreSQL o cualquier backend SQL.",
+            "Flujos autónomos de investigación y procesamiento con LangGraph. Agentes que planifican, buscan en la web, analizan, se auto-critican y redactan — con aprobación humana y streaming en tiempo real.",
         },
         {
-          icon: "🤖",
-          title: "Chatbots de IA con RAG",
+          icon: "⚡",
+          title: "APIs Backend",
           description:
-            "Chatbots que responden preguntas sobre tus documentos usando LangChain, OpenAI y ChromaDB. Memoria multi-turno, citas de fuentes.",
+            "APIs REST con Django REST Framework o FastAPI — control de acceso por roles, auth JWT, PostgreSQL, tareas async con Celery y documentación Swagger completa.",
+        },
+        {
+          icon: "🔒",
+          title: "RAG con Privacidad Preservada",
+          description:
+            "Sistemas de preguntas sobre documentos que eliminan datos sensibles antes de llegar al LLM. Detección de RUT, email y teléfono, chunking semántico y caché de respuestas.",
         },
         {
           icon: "📊",
-          title: "Automatización de Datos",
+          title: "Automatización de Datos y ETL",
           description:
-            "Pipelines de datos end-to-end — ingesta, transformación, validación y exportación. Tareas programadas, alertas y dashboards en Streamlit.",
-        },
-        {
-          icon: "📁",
-          title: "Procesamiento Excel / CSV",
-          description:
-            "Reportes automatizados, flujos de limpieza, deduplicación, normalización de formatos y generación de Excel con Python y Polars.",
+            "Pipelines end-to-end que ingestan, limpian, transforman y exportan tus datos. Tareas programadas, alertas multi-canal (Telegram, Email, WhatsApp) y dashboards Streamlit.",
         },
         {
           icon: "🕷️",
-          title: "Web Scraping y Pipelines",
+          title: "Scraping y Reportes Automáticos",
           description:
-            "Scraping con BeautifulSoup o Playwright, extracción estructurada de datos, almacenamiento y ejecuciones programadas con Docker.",
+            "Recolección automatizada con anti-fingerprinting, normalización con Polars, almacenamiento en PostgreSQL o DuckDB y exportación Excel/CSV lista para compartir.",
         },
         {
           icon: "🔗",
-          title: "Integración de Bots y APIs",
+          title: "Bots e Integraciones de APIs",
           description:
-            "Bots de Telegram, webhooks de WhatsApp, integraciones de Slack y conectores de API de terceros para automatización empresarial.",
+            "Bots de Telegram, webhooks de WhatsApp y conectores de APIs de terceros que se integran a tus sistemas actuales y automatizan tareas repetitivas del negocio.",
         },
       ],
     },
@@ -245,9 +245,9 @@ const translations = {
       tag: "Contacto",
       title: "Contacto",
       subtitle:
-        "Disponible para proyectos freelance en Workana y Upwork. Hablemos sobre lo que necesitas construir.",
+        "Abierto a roles backend/IA full-time y proyectos freelance. Hablemos sobre lo que necesitas construir.",
       availability:
-        "Disponible para trabajo freelance remoto · Python · FastAPI · Herramientas de IA",
+        "Disponible para trabajo remoto · Full-time o freelance · Python · Django · FastAPI · IA",
     },
     footer: {
       copyright: "Bastian Altamirano",
