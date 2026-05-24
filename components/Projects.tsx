@@ -6,6 +6,14 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const projectMeta = [
   {
+    tech: ["LangGraph","FastAPI","Next.js","PostgreSQL","Celery","Redis","SSE","Docker"],
+    github: "https://github.com/Arcan17/agentforge",
+    release: "https://github.com/Arcan17/agentforge",
+    screenshot: "https://raw.githubusercontent.com/Arcan17/agentforge/main/docs/screenshots/01-dashboard.png",
+    screenshotAlt: "AgentForge — multi-agent dashboard showing task pipeline and live events",
+    badge: "latest",
+  },
+  {
     tech: ["Django","DRF","PostgreSQL","Celery","Redis","JWT","pytest","Docker","GitHub Actions"],
     github: "https://github.com/Arcan17/peopleops-workflow-api",
     release: "https://github.com/Arcan17/peopleops-workflow-api/releases/tag/v1.0.0",
@@ -14,12 +22,28 @@ const projectMeta = [
     badge: "v1.0.0",
   },
   {
+    tech: ["FastAPI","ChromaDB","PostgreSQL","OpenAI","spaCy","Docker","GitHub Actions"],
+    github: "https://github.com/Arcan17/privrag",
+    release: "https://github.com/Arcan17/privrag",
+    screenshot: "",
+    screenshotAlt: "PrivRAG — privacy-preserving RAG pipeline",
+    badge: "latest",
+  },
+  {
     tech: ["FastAPI","LangChain","OpenAI","ChromaDB","SQLite","Streamlit","Docker","GitHub Actions"],
     github: "https://github.com/Arcan17/ai-support-bot",
     release: "https://github.com/Arcan17/ai-support-bot/releases/tag/v2.0.1",
     screenshot: "https://raw.githubusercontent.com/Arcan17/ai-support-bot/main/docs/screenshots/chat-with-rag.png",
     screenshotAlt: "AI Support Bot — chat interface showing RAG response with cited sources",
     badge: "v2.0.1",
+  },
+  {
+    tech: ["Python","Scrapling","Polars","DuckDB","FastAPI","Streamlit","Docker","CI/CD"],
+    github: "https://github.com/Arcan17/real-estate-etl",
+    release: "https://real-estate-etl-production.up.railway.app",
+    screenshot: "",
+    screenshotAlt: "Real Estate ETL — dashboard with property listings",
+    badge: "live",
   },
   {
     tech: ["FastAPI","Streamlit","Polars","SQLAlchemy","APScheduler","Docker","GitHub Actions"],
@@ -39,6 +63,13 @@ const techColors: Record<string, string> = {
   Celery: "bg-lime-500/10 text-lime-400 border-lime-500/20",
   Redis: "bg-rose-500/10 text-rose-400 border-rose-500/20",
   JWT: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
+  LangGraph: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+  "Next.js": "bg-slate-500/10 text-slate-300 border-slate-500/20",
+  SSE: "bg-teal-500/10 text-teal-400 border-teal-500/20",
+  spaCy: "bg-blue-400/10 text-blue-300 border-blue-400/20",
+  Scrapling: "bg-orange-500/10 text-orange-400 border-orange-500/20",
+  DuckDB: "bg-yellow-600/10 text-yellow-400 border-yellow-600/20",
+  "CI/CD": "bg-slate-500/10 text-slate-400 border-slate-500/20",
   pytest: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
   LangChain: "bg-violet-500/10 text-violet-400 border-violet-500/20",
   OpenAI: "bg-sky-500/10 text-sky-400 border-sky-500/20",
