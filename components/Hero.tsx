@@ -78,7 +78,7 @@ export default function Hero() {
 
         {/* Tech pills */}
         <div className="mt-14 flex flex-wrap justify-center gap-2 text-xs text-slate-500">
-          {["Python","FastAPI","LangChain","OpenAI","ChromaDB","Streamlit","SQLAlchemy","Docker","GitHub Actions"].map((tech) => (
+          {["Python","Django","FastAPI","LangGraph","LangChain","OpenAI","ChromaDB","PostgreSQL","Docker","GitHub Actions"].map((tech) => (
             <span key={tech} className="px-3 py-1 rounded-full border border-[#1e2d45] bg-[#0f1623]">
               {tech}
             </span>

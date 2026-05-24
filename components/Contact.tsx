@@ -4,7 +4,7 @@ import { Mail } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { SectionHeader } from "./Projects";
 
-const EMAIL = "bast-1996@hotmail.com";
+const EMAIL = "mixtape.bast@gmail.com";
 
 export default function Contact() {
   const { t } = useLanguage();

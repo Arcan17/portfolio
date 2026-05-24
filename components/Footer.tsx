@@ -1,4 +1,4 @@
-const EMAIL = "bast-1996@hotmail.com";
+const EMAIL = "mixtape.bast@gmail.com";
 
 export default function Footer() {
   return (

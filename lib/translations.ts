@@ -32,24 +32,24 @@ const translations = {
             "Production-grade multi-agent research pipeline built with LangGraph and FastAPI. A task description becomes a structured report in minutes: Planner → Researcher → Analyst → Critic → Writer, with automatic revision loops, human-in-the-loop approval via SSE streaming, source citations, cost tracking and a Next.js dashboard. Celery + Redis keeps the API responsive while agents run in the background.",
         },
         {
-          title: "PeopleOps Workflow API",
-          description:
-            "Production-grade HR workflow API built with Django REST Framework. Manages the full lifecycle of employee requests: creation, approval and rejection with role-based access control (admin / manager / employee). Includes JWT auth, Celery async tasks, PostgreSQL, magic-bytes file validation, aggregated reports with CSV export and 89 automated tests at 92% coverage.",
-        },
-        {
           title: "PrivRAG",
           description:
             "Privacy-preserving RAG pipeline for enterprise documents. Strips Chilean RUT, emails and phone numbers before embedding — sensitive data never reaches the LLM. Features semantic chunking, SHA256 token cache (30–45% cache hit rate), ChromaDB vector search with cosine threshold, Telegram automation and a /metrics endpoint. Built for legal, HR and healthcare use cases.",
         },
         {
-          title: "AI Support Bot",
-          description:
-            "AI chatbot API with multi-turn memory and RAG over uploaded documents. Users upload TXT, PDF or CSV files, ask questions and receive answers with cited sources. Built with FastAPI, LangChain, OpenAI and ChromaDB. Includes a Streamlit demo UI, sample FAQ and 58 automated tests.",
-        },
-        {
           title: "Real Estate ETL Pipeline",
           description:
             "End-to-end ETL for Chilean real estate listings. Scrapes ~240 live listings with Scrapling (anti-bot fingerprinting), normalizes data with Polars, loads into DuckDB, exposes a FastAPI query layer with Excel/XLSX export and a Streamlit dashboard with interactive filters. Live on Railway.",
+        },
+        {
+          title: "PeopleOps Workflow API",
+          description:
+            "Production-grade HR workflow API built with Django REST Framework. Manages the full lifecycle of employee requests: creation, approval and rejection with role-based access control (admin / manager / employee). Includes JWT auth, Celery async tasks, PostgreSQL, magic-bytes file validation, aggregated reports with CSV export and 89 automated tests at 92% coverage.",
+        },
+        {
+          title: "AI Support Bot",
+          description:
+            "AI chatbot API with multi-turn memory and RAG over uploaded documents. Users upload TXT, PDF or CSV files, ask questions and receive answers with cited sources. Built with FastAPI, LangChain, OpenAI and ChromaDB. Includes a Streamlit demo UI, sample FAQ and 58 automated tests.",
         },
         {
           title: "Automation Toolkit",
@@ -159,24 +159,24 @@ const translations = {
             "Pipeline multi-agente de nivel productivo construido con LangGraph y FastAPI. Una descripción de tarea se convierte en un informe estructurado en minutos: Planificador → Investigador → Analista → Crítico → Escritor, con loops de revisión automáticos, aprobación humana en el loop vía SSE, citas de fuentes, tracking de costos y dashboard en Next.js. Celery + Redis mantiene la API responsiva mientras los agentes ejecutan en segundo plano.",
         },
         {
-          title: "PeopleOps Workflow API",
-          description:
-            "API de RRHH de nivel productivo construida con Django REST Framework. Gestiona el ciclo completo de solicitudes de empleados: creación, aprobación y rechazo con control de acceso por roles (admin / manager / empleado). Incluye auth JWT, tareas async con Celery, PostgreSQL, validación de archivos por magic bytes, reportes con exportación CSV y 89 tests automatizados con 92% de cobertura.",
-        },
-        {
           title: "PrivRAG",
           description:
             "Pipeline RAG con preservación de privacidad para documentos empresariales. Elimina RUT chileno, emails y teléfonos antes del embedding — los datos sensibles nunca llegan al LLM. Incluye chunking semántico, caché SHA256 de tokens (30–45% de hit rate), búsqueda vectorial ChromaDB con umbral coseno, automatización vía Telegram y endpoint /metrics. Diseñado para casos legales, RRHH y salud.",
         },
         {
-          title: "AI Support Bot",
-          description:
-            "API de chatbot con memoria multi-turno y RAG sobre documentos subidos. Los usuarios cargan archivos TXT, PDF o CSV, hacen preguntas y reciben respuestas con fuentes citadas. Construido con FastAPI, LangChain, OpenAI y ChromaDB. Incluye UI demo con Streamlit, FAQ de ejemplo y 58 tests automatizados.",
-        },
-        {
           title: "Real Estate ETL Pipeline",
           description:
             "ETL end-to-end para listados inmobiliarios en Chile. Scraping de ~240 propiedades con Scrapling (anti-fingerprinting), normalización con Polars, carga en DuckDB, endpoint FastAPI con exportación Excel/XLSX y dashboard Streamlit con filtros interactivos. En producción en Railway.",
+        },
+        {
+          title: "PeopleOps Workflow API",
+          description:
+            "API de RRHH de nivel productivo construida con Django REST Framework. Gestiona el ciclo completo de solicitudes de empleados: creación, aprobación y rechazo con control de acceso por roles (admin / manager / empleado). Incluye auth JWT, tareas async con Celery, PostgreSQL, validación de archivos por magic bytes, reportes con exportación CSV y 89 tests automatizados con 92% de cobertura.",
+        },
+        {
+          title: "AI Support Bot",
+          description:
+            "API de chatbot con memoria multi-turno y RAG sobre documentos subidos. Los usuarios cargan archivos TXT, PDF o CSV, hacen preguntas y reciben respuestas con fuentes citadas. Construido con FastAPI, LangChain, OpenAI y ChromaDB. Incluye UI demo con Streamlit, FAQ de ejemplo y 58 tests automatizados.",
         },
         {
           title: "Automation Toolkit",

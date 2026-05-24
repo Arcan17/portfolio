@@ -4,10 +4,10 @@ import { useLanguage } from "@/context/LanguageContext";
 import { SectionHeader } from "./Projects";
 
 const stackItems = [
-  ["Python", "FastAPI", "SQLAlchemy", "Pydantic"],
-  ["LangChain", "OpenAI", "ChromaDB", "Polars"],
-  ["Streamlit", "Next.js", "Tailwind CSS"],
-  ["Docker", "GitHub Actions", "Vercel"],
+  ["Python", "Django/DRF", "FastAPI", "SQLAlchemy"],
+  ["LangGraph", "LangChain", "OpenAI", "ChromaDB"],
+  ["PostgreSQL", "Redis", "Celery", "Docker"],
+  ["pytest", "GitHub Actions", "Vercel", "Railway"],
 ];
 
 export default function About() {
