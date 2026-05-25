@@ -9,10 +9,10 @@ const translations = {
       contact: "Contact",
     },
     hero: {
-      badge: "Available for freelance projects",
-      headline1: "Python Backend Developer",
-      headline2: "building automation, data processing and AI-powered tools.",
-      sub: "I build <b>multi-agent AI pipelines</b>, <b>Django &amp; FastAPI backends</b>, <b>privacy-preserving RAG systems</b>, and <b>data automation tools</b>.",
+      badge: "Available for remote roles",
+      headline1: "AI Backend Engineer",
+      headline2: "building RAG systems, multi-agent pipelines and Python APIs.",
+      sub: "I build <b>production RAG pipelines</b>, <b>multi-agent AI systems</b>, <b>FastAPI backends</b>, and <b>data automation tools</b>.",
       btnProjects: "View Projects",
       btnContact: "Contact Me",
     },
@@ -34,7 +34,7 @@ const translations = {
         {
           title: "PrivRAG",
           description:
-            "Privacy-preserving RAG pipeline for enterprise documents. Strips Chilean RUT, emails and phone numbers before embedding — sensitive data never reaches the LLM. Features semantic chunking, SHA256 token cache (30–45% cache hit rate), ChromaDB vector search with cosine threshold, Telegram automation and a /metrics endpoint. Built for legal, HR and healthcare use cases.",
+            "Privacy-preserving RAG pipeline for enterprise documents — live on Railway. Strips Chilean RUT, emails and phone numbers before embedding: raw PII never reaches the LLM. Local ONNX embeddings via fastembed (no API key needed). SHA256 query cache (30–45% hit rate), cosine threshold filtering (0.75), and a retrieval eval suite with Precision@1 validation on a controlled dataset. 61 automated tests.",
         },
         {
           title: "Real Estate ETL Pipeline",
@@ -106,9 +106,9 @@ const translations = {
       tag: "Background",
       title: "About me",
       subtitle:
-        "Python developer focused on building practical, production-ready tools.",
-      p1: "I am a Python backend developer focused on practical automation tools, APIs, data workflows and AI-powered systems. I build portfolio-ready and client-ready solutions using Django REST Framework, FastAPI, PostgreSQL, Celery, Docker and modern AI APIs.",
-      p2: "My work centers on solving real business problems: automating repetitive data tasks, building chatbots that answer questions over internal documents, and exposing clean APIs that integrate with existing systems.",
+        "AI Backend Engineer focused on RAG systems, multi-agent pipelines and production Python APIs.",
+      p1: "I build production-ready RAG pipelines, multi-agent LangGraph systems and Python backend APIs. Deployed live systems on Railway — including PrivRAG, a privacy-preserving RAG API with PII stripping, retrieval eval tests and SHA256 caching.",
+      p2: "My work focuses on real engineering problems: making LLMs useful on private documents without leaking sensitive data, building agent pipelines that actually complete tasks, and shipping backends that are tested, Dockerized and documented.",
       p3: "Every project I ship includes documentation, tests and a clear README — because production code needs to be maintainable, not just functional.",
       btnGithub: "GitHub profile",
       btnLinkedin: "LinkedIn",
@@ -135,11 +135,11 @@ const translations = {
       contact: "Contacto",
     },
     hero: {
-      badge: "Disponible para proyectos freelance",
-      headline1: "Python Backend Developer",
+      badge: "Disponible para roles remotos",
+      headline1: "AI Backend Engineer",
       headline2:
-        "construyendo automatización, procesamiento de datos y herramientas con IA.",
-      sub: "Construyo <b>pipelines multi-agente con IA</b>, <b>backends con Django y FastAPI</b>, <b>sistemas RAG con privacidad preservada</b> y <b>herramientas de automatización de datos</b>.",
+        "construyendo sistemas RAG, pipelines multi-agente y APIs Python.",
+      sub: "Construyo <b>pipelines RAG de producción</b>, <b>sistemas multi-agente con IA</b>, <b>backends con FastAPI</b> y <b>herramientas de automatización de datos</b>.",
       btnProjects: "Ver Proyectos",
       btnContact: "Contactar",
     },
@@ -161,7 +161,7 @@ const translations = {
         {
           title: "PrivRAG",
           description:
-            "Pipeline RAG con preservación de privacidad para documentos empresariales. Elimina RUT chileno, emails y teléfonos antes del embedding — los datos sensibles nunca llegan al LLM. Incluye chunking semántico, caché SHA256 de tokens (30–45% de hit rate), búsqueda vectorial ChromaDB con umbral coseno, automatización vía Telegram y endpoint /metrics. Diseñado para casos legales, RRHH y salud.",
+            "Pipeline RAG con privacidad preservada para documentos empresariales — en producción en Railway. Elimina RUT chileno, emails y teléfonos antes del embedding: los datos sensibles nunca llegan al LLM. Embeddings locales ONNX sin API key. Caché SHA256 (30–45% hit rate), filtrado por umbral coseno (0.75) y suite de evaluación RAG con Precision@1 sobre dataset controlado. 61 tests automatizados.",
         },
         {
           title: "Real Estate ETL Pipeline",
@@ -233,9 +233,9 @@ const translations = {
       tag: "Perfil",
       title: "Sobre mí",
       subtitle:
-        "Desarrollador Python enfocado en construir herramientas prácticas y listas para producción.",
-      p1: "Soy un desarrollador backend Python enfocado en herramientas prácticas de automatización, APIs, flujos de datos y sistemas impulsados por IA. Construyo soluciones listas para portafolio y clientes usando Django REST Framework, FastAPI, PostgreSQL, Celery, Docker y APIs modernas de IA.",
-      p2: "Mi trabajo se centra en resolver problemas reales de negocio: automatizar tareas de datos repetitivas, construir chatbots que respondan preguntas sobre documentos internos y exponer APIs limpias que se integren con sistemas existentes.",
+        "AI Backend Engineer especializado en sistemas RAG, pipelines multi-agente y APIs Python de producción.",
+      p1: "Construyo pipelines RAG de producción, sistemas multi-agente con LangGraph y backends Python. Tengo sistemas desplegados en Railway, incluyendo PrivRAG, una API RAG con preservación de privacidad, PII stripping, tests de evaluación de retrieval y caché SHA256.",
+      p2: "Mi trabajo se enfoca en problemas reales de ingeniería: hacer que los LLMs sean útiles sobre documentos privados sin filtrar datos sensibles, construir pipelines de agentes que completan tareas reales, y entregar backends con tests, Docker y documentación.",
       p3: "Cada proyecto que entrego incluye documentación, tests y un README claro — porque el código de producción necesita ser mantenible, no solo funcional.",
       btnGithub: "Perfil en GitHub",
       btnLinkedin: "LinkedIn",
