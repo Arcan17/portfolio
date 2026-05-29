@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex items-center gap-6">
           <a href="https://github.com/Arcan17" target="_blank" rel="noopener noreferrer"
             className="hover:text-slate-400 transition-colors">GitHub</a>
-          <a href="https://www.linkedin.com/in/bastian-altamirano-3805b4309/" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.linkedin.com/in/bastian-altamirano/" target="_blank" rel="noopener noreferrer"
             className="hover:text-slate-400 transition-colors">LinkedIn</a>
           <a href={`mailto:${EMAIL}`} className="hover:text-slate-400 transition-colors">{EMAIL}</a>
         </div>

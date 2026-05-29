@@ -31,7 +31,7 @@ export default function About() {
                 <GithubIcon />
                 {a.btnGithub}
               </a>
-              <a href="https://www.linkedin.com/in/bastian-altamirano-3805b4309/" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/bastian-altamirano/" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#1e2d45] text-sm text-slate-400 hover:text-blue-400 hover:border-blue-500 transition-colors">
                 <LinkedinIcon />
                 {a.btnLinkedin}

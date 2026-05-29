@@ -21,7 +21,7 @@ export default function Contact() {
     {
       label: "LinkedIn",
       value: "Bastian Altamirano",
-      href: "https://www.linkedin.com/in/bastian-altamirano-3805b4309/",
+      href: "https://www.linkedin.com/in/bastian-altamirano/",
       icon: <LinkedinIcon />,
       color: "hover:border-blue-500 hover:text-blue-400",
     },

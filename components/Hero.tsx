@@ -66,7 +66,7 @@ export default function Hero() {
             GitHub
           </a>
           <a
-            href="https://www.linkedin.com/in/bastian-altamirano-3805b4309/"
+            href="https://www.linkedin.com/in/bastian-altamirano/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-3 rounded-lg border border-slate-700 hover:border-blue-500 text-slate-400 hover:text-blue-400 font-medium text-sm transition-colors"
