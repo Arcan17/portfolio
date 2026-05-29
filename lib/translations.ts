@@ -9,7 +9,7 @@ const translations = {
       contact: "Contact",
     },
     hero: {
-      badge: "Available for remote roles",
+      badge: "Open to remote roles & freelance projects",
       headline1: "Python Backend Developer",
       headline2: "building production APIs, automation platforms and RAG systems.",
       sub: "I build <b>FastAPI/Django backends</b>, <b>async processing systems</b>, <b>data automation workflows</b>, and <b>AI-powered tools</b> — all with Docker, PostgreSQL, CI/CD and automated testing.",
@@ -145,7 +145,7 @@ const translations = {
       contact: "Contacto",
     },
     hero: {
-      badge: "Disponible para roles remotos",
+      badge: "Disponible para roles remotos y proyectos freelance",
       headline1: "Python Backend Developer",
       headline2:
         "construyendo APIs, plataformas de automatización y sistemas RAG orientados a producción.",
