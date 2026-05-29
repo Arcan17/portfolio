@@ -6,11 +6,11 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const projectMeta = [
   {
-    tech: ["LangGraph","FastAPI","Next.js","PostgreSQL","Celery","Redis","SSE","Docker"],
-    github: "https://github.com/Arcan17/agentforge",
-    release: "https://github.com/Arcan17/agentforge",
-    screenshot: "https://raw.githubusercontent.com/Arcan17/agentforge/main/docs/screenshots/01-dashboard.png",
-    screenshotAlt: "AgentForge — multi-agent dashboard showing task pipeline and live events",
+    tech: ["FastAPI","PostgreSQL","Celery","Redis","JWT","RBAC","Alembic","Next.js","TypeScript","pytest","Docker","CI/CD"],
+    github: "https://github.com/Arcan17/integrationops",
+    release: "https://github.com/Arcan17/integrationops",
+    screenshot: "https://raw.githubusercontent.com/Arcan17/integrationops/main/docs/images/dashboard-overview.png",
+    screenshotAlt: "IntegrationOps — dashboard overview showing uploads, jobs, exports and audit logs",
     badge: "latest",
   },
   {
@@ -22,11 +22,11 @@ const projectMeta = [
     badge: "LIVE ↗",
   },
   {
-    tech: ["FastAPI","PostgreSQL","Celery","Redis","JWT","RBAC","Alembic","Next.js","TypeScript","pytest","Docker","CI/CD"],
-    github: "https://github.com/Arcan17/integrationops",
-    release: "https://github.com/Arcan17/integrationops",
-    screenshot: "https://raw.githubusercontent.com/Arcan17/integrationops/main/docs/images/dashboard-overview.png",
-    screenshotAlt: "IntegrationOps — dashboard overview showing uploads, jobs, exports and audit logs",
+    tech: ["LangGraph","FastAPI","Next.js","PostgreSQL","Celery","Redis","SSE","Docker"],
+    github: "https://github.com/Arcan17/agentforge",
+    release: "https://github.com/Arcan17/agentforge",
+    screenshot: "https://raw.githubusercontent.com/Arcan17/agentforge/main/docs/screenshots/01-dashboard.png",
+    screenshotAlt: "AgentForge — multi-agent dashboard showing task pipeline and live events",
     badge: "latest",
   },
   {
@@ -36,6 +36,14 @@ const projectMeta = [
     screenshot: "",
     screenshotAlt: "Real Estate ETL — dashboard with property listings",
     badge: "live ↗",
+  },
+  {
+    tech: ["Python","Web3.py","FastAPI","PostgreSQL","asyncio","Telegram","Docker","CI/CD"],
+    github: "https://github.com/Arcan17/crypto-whale-tracker",
+    release: "https://github.com/Arcan17/crypto-whale-tracker",
+    screenshot: "",
+    screenshotAlt: "Crypto Whale Tracker — real-time Ethereum whale movement alerts",
+    badge: "latest",
   },
   {
     tech: ["Django","DRF","PostgreSQL","Celery","Redis","JWT","pytest","Docker","GitHub Actions"],
@@ -94,6 +102,9 @@ const techColors: Record<string, string> = {
   RBAC: "bg-amber-500/10 text-amber-400 border-amber-500/20",
   Alembic: "bg-teal-500/10 text-teal-400 border-teal-500/20",
   TypeScript: "bg-blue-600/10 text-blue-300 border-blue-600/20",
+  "Web3.py": "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
+  Telegram: "bg-sky-500/10 text-sky-400 border-sky-500/20",
+  asyncio: "bg-teal-500/10 text-teal-400 border-teal-500/20",
 };
 
 export function SectionHeader({ tag, title, subtitle }: { tag: string; title: string; subtitle: string }) {

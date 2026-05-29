@@ -10,9 +10,9 @@ const translations = {
     },
     hero: {
       badge: "Available for remote roles",
-      headline1: "AI Backend Engineer",
-      headline2: "building RAG systems, multi-agent pipelines and Python APIs.",
-      sub: "I build <b>production RAG pipelines</b>, <b>multi-agent AI systems</b>, <b>FastAPI backends</b>, and <b>data automation tools</b>.",
+      headline1: "Python Backend Developer",
+      headline2: "building production APIs, automation platforms and RAG systems.",
+      sub: "I build <b>FastAPI/Django backends</b>, <b>async processing systems</b>, <b>data automation workflows</b>, and <b>AI-powered tools</b> — all with Docker, PostgreSQL, CI/CD and automated testing.",
       btnProjects: "View Projects",
       btnContact: "Contact Me",
     },
@@ -27,9 +27,9 @@ const translations = {
       releaseLabel: "Release",
       items: [
         {
-          title: "AgentForge",
+          title: "IntegrationOps",
           description:
-            "Production-grade multi-agent research pipeline built with LangGraph and FastAPI. A task description becomes a structured report in minutes: Planner → Researcher → Analyst → Critic → Writer, with automatic revision loops, human-in-the-loop approval via SSE streaming, source citations, cost tracking and a Next.js dashboard. Celery + Redis keeps the API responsive while agents run in the background.",
+            "Backend platform for data ingestion, validation, async processing, webhooks and audit trail — modeled as a realistic internal company tool. CSV/XLSX upload with row-level validation, async Celery+Redis jobs with bounded retries, HMAC-SHA256 signed webhooks, CSV/XLSX exports and a full operational audit log. JWT auth with role-based access control (admin/operator/viewer). Includes a Next.js + TypeScript dashboard covering uploads, validation errors, jobs, exports and audit logs. Alembic migrations, Docker Compose, pytest suite, GitHub Actions CI.",
         },
         {
           title: "PrivRAG",
@@ -37,14 +37,19 @@ const translations = {
             "Privacy-preserving RAG pipeline for enterprise documents — live on Railway. Strips Chilean RUT, emails and phone numbers before embedding: raw PII never reaches the LLM. Local ONNX embeddings via fastembed (no API key needed). SHA256 query cache (30–45% hit rate), cosine threshold filtering (0.75), and a retrieval eval suite with Precision@1 validation on a controlled dataset. 61 automated tests.",
         },
         {
-          title: "IntegrationOps",
+          title: "AgentForge",
           description:
-            "Backend platform for data ingestion, validation, async processing, webhooks and audit trail — modeled as a realistic internal company tool. CSV/XLSX upload with row-level validation, async Celery+Redis jobs with bounded retries, HMAC-SHA256 signed webhooks, CSV/XLSX exports and a full operational audit log. JWT auth with role-based access control (admin/operator/viewer). Includes a Next.js + TypeScript dashboard covering uploads, validation errors, jobs, exports and audit logs. Alembic migrations, Docker Compose, pytest suite, GitHub Actions CI.",
+            "Production-grade multi-agent research pipeline built with LangGraph and FastAPI. A task description becomes a structured report in minutes: Planner → Researcher → Analyst → Critic → Writer, with automatic revision loops, human-in-the-loop approval via SSE streaming, source citations, cost tracking and a Next.js dashboard. Celery + Redis keeps the API responsive while agents run in the background.",
         },
         {
           title: "Real Estate ETL Pipeline",
           description:
             "End-to-end ETL for Chilean real estate listings. Scrapes ~240 live listings with Scrapling (anti-bot fingerprinting), normalizes data with Polars, loads into DuckDB, exposes a FastAPI query layer with Excel/XLSX export and a Streamlit dashboard with interactive filters. Live on Railway.",
+        },
+        {
+          title: "Crypto Whale Tracker",
+          description:
+            "Real-time Ethereum on-chain intelligence pipeline. Streams pending transactions via WebSocket, detects whale movements above a configurable USD threshold, labels known exchange/DeFi/bridge wallets, stores alerts in PostgreSQL and sends instant Telegram notifications. Exposes a FastAPI REST API with paginated queries, CSV/XLSX export endpoints and wallet intelligence summaries. 30 automated tests.",
         },
         {
           title: "PeopleOps Workflow API",
@@ -112,8 +117,8 @@ const translations = {
       title: "About me",
       subtitle:
         "AI Backend Engineer focused on RAG systems, multi-agent pipelines and production Python APIs.",
-      p1: "I build production-ready RAG pipelines, multi-agent LangGraph systems and Python backend APIs. Deployed live systems on Railway — including PrivRAG, a privacy-preserving RAG API with PII stripping, retrieval eval tests and SHA256 caching.",
-      p2: "My work focuses on real engineering problems: making LLMs useful on private documents without leaking sensitive data, building agent pipelines that actually complete tasks, and shipping backends that are tested, Dockerized and documented.",
+      p1: "I build production-ready REST APIs, backend automation platforms and AI-powered services. Recent work includes IntegrationOps — a full-stack platform with RBAC, async job processing, HMAC-signed webhooks and audit logs — and PrivRAG, a privacy-preserving RAG API with PII stripping and SHA256 caching deployed live on Railway.",
+      p2: "My work focuses on real engineering problems: building backends that handle real-world data reliably, automating workflows end-to-end, and shipping AI-powered services with proper testing, observability and documentation.",
       p3: "Every project I ship includes documentation, tests and a clear README — because production code needs to be maintainable, not just functional.",
       btnGithub: "GitHub profile",
       btnLinkedin: "LinkedIn",
@@ -123,9 +128,9 @@ const translations = {
       tag: "Get in touch",
       title: "Contact",
       subtitle:
-        "Open to full-time backend/AI roles and freelance projects. Let's talk about what you need to build.",
+        "Open to remote backend roles and freelance projects. Let's talk about what you need to build.",
       availability:
-        "Available for remote work · Full-time or freelance · Python · Django · FastAPI · AI",
+        "Open to remote roles & freelance · Python · FastAPI · Django · PostgreSQL · Celery · Redis · Docker · LangGraph · RAG",
     },
     footer: {
       copyright: "Bastian Altamirano",
@@ -141,10 +146,10 @@ const translations = {
     },
     hero: {
       badge: "Disponible para roles remotos",
-      headline1: "AI Backend Engineer",
+      headline1: "Python Backend Developer",
       headline2:
-        "construyendo sistemas RAG, pipelines multi-agente y APIs Python.",
-      sub: "Construyo <b>pipelines RAG de producción</b>, <b>sistemas multi-agente con IA</b>, <b>backends con FastAPI</b> y <b>herramientas de automatización de datos</b>.",
+        "construyendo APIs, plataformas de automatización y sistemas RAG orientados a producción.",
+      sub: "Construyo <b>backends con FastAPI/Django</b>, <b>sistemas de procesamiento async</b>, <b>workflows de automatización de datos</b> y <b>herramientas con IA</b> — con Docker, PostgreSQL, CI/CD y testing automatizado.",
       btnProjects: "Ver Proyectos",
       btnContact: "Contactar",
     },
@@ -159,9 +164,9 @@ const translations = {
       releaseLabel: "Release",
       items: [
         {
-          title: "AgentForge",
+          title: "IntegrationOps",
           description:
-            "Pipeline multi-agente de nivel productivo construido con LangGraph y FastAPI. Una descripción de tarea se convierte en un informe estructurado en minutos: Planificador → Investigador → Analista → Crítico → Escritor, con loops de revisión automáticos, aprobación humana en el loop vía SSE, citas de fuentes, tracking de costos y dashboard en Next.js. Celery + Redis mantiene la API responsiva mientras los agentes ejecutan en segundo plano.",
+            "Plataforma backend para ingesta de datos, validación, procesamiento async, webhooks y auditoría operacional — modelada como una herramienta interna real de empresa. Carga CSV/XLSX con validación por fila, jobs async Celery+Redis con reintentos acotados, webhooks firmados HMAC-SHA256, exportaciones CSV/XLSX y un log de auditoría completo. Auth JWT con control de acceso por roles (admin/operador/viewer). Incluye dashboard Next.js + TypeScript con vistas de uploads, errores de validación, jobs, exports y logs. Migraciones Alembic, Docker Compose, suite pytest, CI con GitHub Actions.",
         },
         {
           title: "PrivRAG",
@@ -169,14 +174,19 @@ const translations = {
             "Pipeline RAG con privacidad preservada para documentos empresariales — en producción en Railway. Elimina RUT chileno, emails y teléfonos antes del embedding: los datos sensibles nunca llegan al LLM. Embeddings locales ONNX sin API key. Caché SHA256 (30–45% hit rate), filtrado por umbral coseno (0.75) y suite de evaluación RAG con Precision@1 sobre dataset controlado. 61 tests automatizados.",
         },
         {
-          title: "IntegrationOps",
+          title: "AgentForge",
           description:
-            "Plataforma backend para ingesta de datos, validación, procesamiento async, webhooks y auditoría operacional — modelada como una herramienta interna real de empresa. Carga CSV/XLSX con validación por fila, jobs async Celery+Redis con reintentos acotados, webhooks firmados HMAC-SHA256, exportaciones CSV/XLSX y un log de auditoría completo. Auth JWT con control de acceso por roles (admin/operador/viewer). Incluye dashboard Next.js + TypeScript con vistas de uploads, errores de validación, jobs, exports y logs. Migraciones Alembic, Docker Compose, suite pytest, CI con GitHub Actions.",
+            "Pipeline multi-agente de nivel productivo construido con LangGraph y FastAPI. Una descripción de tarea se convierte en un informe estructurado en minutos: Planificador → Investigador → Analista → Crítico → Escritor, con loops de revisión automáticos, aprobación humana en el loop vía SSE, citas de fuentes, tracking de costos y dashboard en Next.js. Celery + Redis mantiene la API responsiva mientras los agentes ejecutan en segundo plano.",
         },
         {
           title: "Real Estate ETL Pipeline",
           description:
             "ETL end-to-end para listados inmobiliarios en Chile. Scraping de ~240 propiedades con Scrapling (anti-fingerprinting), normalización con Polars, carga en DuckDB, endpoint FastAPI con exportación Excel/XLSX y dashboard Streamlit con filtros interactivos. En producción en Railway.",
+        },
+        {
+          title: "Crypto Whale Tracker",
+          description:
+            "Pipeline de inteligencia on-chain en tiempo real sobre Ethereum. Transmite transacciones pendientes vía WebSocket, detecta movimientos whale sobre un umbral configurable en USD, etiqueta wallets conocidas de exchanges/DeFi/bridges, almacena alertas en PostgreSQL y envía notificaciones instantáneas por Telegram. Expone una API REST FastAPI con queries paginadas, endpoints de exportación CSV/XLSX y resúmenes de wallet intelligence. 30 tests automatizados.",
         },
         {
           title: "PeopleOps Workflow API",
@@ -244,8 +254,8 @@ const translations = {
       title: "Sobre mí",
       subtitle:
         "AI Backend Engineer especializado en sistemas RAG, pipelines multi-agente y APIs Python de producción.",
-      p1: "Construyo pipelines RAG de producción, sistemas multi-agente con LangGraph y backends Python. Tengo sistemas desplegados en Railway, incluyendo PrivRAG, una API RAG con preservación de privacidad, PII stripping, tests de evaluación de retrieval y caché SHA256.",
-      p2: "Mi trabajo se enfoca en problemas reales de ingeniería: hacer que los LLMs sean útiles sobre documentos privados sin filtrar datos sensibles, construir pipelines de agentes que completan tareas reales, y entregar backends con tests, Docker y documentación.",
+      p1: "Construyo APIs REST, plataformas de automatización backend y servicios con IA orientados a producción. Trabajo reciente incluye IntegrationOps — plataforma full-stack con RBAC, jobs async, webhooks firmados HMAC y audit log — y PrivRAG, una API RAG con PII stripping y caché SHA256 desplegada en Railway.",
+      p2: "Mi trabajo se enfoca en problemas reales de ingeniería: backends que manejan datos reales de forma confiable, automatización end-to-end de workflows, y entrega de servicios con IA con testing, observabilidad y documentación.",
       p3: "Cada proyecto que entrego incluye documentación, tests y un README claro — porque el código de producción necesita ser mantenible, no solo funcional.",
       btnGithub: "Perfil en GitHub",
       btnLinkedin: "LinkedIn",
@@ -255,9 +265,9 @@ const translations = {
       tag: "Contacto",
       title: "Contacto",
       subtitle:
-        "Abierto a roles backend/IA full-time y proyectos freelance. Hablemos sobre lo que necesitas construir.",
+        "Abierto a roles remotos backend y proyectos freelance. Hablemos sobre lo que necesitas construir.",
       availability:
-        "Disponible para trabajo remoto · Full-time o freelance · Python · Django · FastAPI · IA",
+        "Abierto a roles remotos y freelance · Python · FastAPI · Django · PostgreSQL · Celery · Redis · Docker · LangGraph · RAG",
     },
     footer: {
       copyright: "Bastian Altamirano",
