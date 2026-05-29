@@ -37,6 +37,11 @@ const translations = {
             "Privacy-preserving RAG pipeline for enterprise documents — live on Railway. Strips Chilean RUT, emails and phone numbers before embedding: raw PII never reaches the LLM. Local ONNX embeddings via fastembed (no API key needed). SHA256 query cache (30–45% hit rate), cosine threshold filtering (0.75), and a retrieval eval suite with Precision@1 validation on a controlled dataset. 61 automated tests.",
         },
         {
+          title: "IntegrationOps",
+          description:
+            "Backend platform for data ingestion, validation, async processing, webhooks and audit trail — modeled as a realistic internal company tool. CSV/XLSX upload with row-level validation, async Celery+Redis jobs with bounded retries, HMAC-SHA256 signed webhooks, CSV/XLSX exports and a full operational audit log. JWT auth with role-based access control (admin/operator/viewer). Includes a Next.js + TypeScript dashboard covering uploads, validation errors, jobs, exports and audit logs. Alembic migrations, Docker Compose, pytest suite, GitHub Actions CI.",
+        },
+        {
           title: "Real Estate ETL Pipeline",
           description:
             "End-to-end ETL for Chilean real estate listings. Scrapes ~240 live listings with Scrapling (anti-bot fingerprinting), normalizes data with Polars, loads into DuckDB, exposes a FastAPI query layer with Excel/XLSX export and a Streamlit dashboard with interactive filters. Live on Railway.",
@@ -162,6 +167,11 @@ const translations = {
           title: "PrivRAG",
           description:
             "Pipeline RAG con privacidad preservada para documentos empresariales — en producción en Railway. Elimina RUT chileno, emails y teléfonos antes del embedding: los datos sensibles nunca llegan al LLM. Embeddings locales ONNX sin API key. Caché SHA256 (30–45% hit rate), filtrado por umbral coseno (0.75) y suite de evaluación RAG con Precision@1 sobre dataset controlado. 61 tests automatizados.",
+        },
+        {
+          title: "IntegrationOps",
+          description:
+            "Plataforma backend para ingesta de datos, validación, procesamiento async, webhooks y auditoría operacional — modelada como una herramienta interna real de empresa. Carga CSV/XLSX con validación por fila, jobs async Celery+Redis con reintentos acotados, webhooks firmados HMAC-SHA256, exportaciones CSV/XLSX y un log de auditoría completo. Auth JWT con control de acceso por roles (admin/operador/viewer). Incluye dashboard Next.js + TypeScript con vistas de uploads, errores de validación, jobs, exports y logs. Migraciones Alembic, Docker Compose, suite pytest, CI con GitHub Actions.",
         },
         {
           title: "Real Estate ETL Pipeline",

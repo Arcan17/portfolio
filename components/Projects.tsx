@@ -22,6 +22,14 @@ const projectMeta = [
     badge: "LIVE ↗",
   },
   {
+    tech: ["FastAPI","PostgreSQL","Celery","Redis","JWT","RBAC","Alembic","Next.js","TypeScript","pytest","Docker","CI/CD"],
+    github: "https://github.com/Arcan17/integrationops",
+    release: "https://github.com/Arcan17/integrationops",
+    screenshot: "https://raw.githubusercontent.com/Arcan17/integrationops/main/docs/images/dashboard-overview.png",
+    screenshotAlt: "IntegrationOps — dashboard overview showing uploads, jobs, exports and audit logs",
+    badge: "latest",
+  },
+  {
     tech: ["Python","Scrapling","Polars","DuckDB","FastAPI","Streamlit","Docker","CI/CD"],
     github: "https://github.com/Arcan17/real-estate-etl",
     release: "https://real-estate-etl-production.up.railway.app",
@@ -83,6 +91,9 @@ const techColors: Record<string, string> = {
   "GitHub Actions": "bg-slate-500/10 text-slate-400 border-slate-500/20",
   Polars: "bg-amber-500/10 text-amber-400 border-amber-500/20",
   APScheduler: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+  RBAC: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+  Alembic: "bg-teal-500/10 text-teal-400 border-teal-500/20",
+  TypeScript: "bg-blue-600/10 text-blue-300 border-blue-600/20",
 };
 
 export function SectionHeader({ tag, title, subtitle }: { tag: string; title: string; subtitle: string }) {
