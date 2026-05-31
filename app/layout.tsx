@@ -3,24 +3,26 @@ import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "Bastian Altamirano — Python Backend Developer",
+  title: "Bastian Altamirano — Python Backend & Applied AI Engineer",
   description:
-    "Python Backend Developer building automation, data processing and AI-powered tools. FastAPI, LangChain, OpenAI, ChromaDB, Streamlit, Docker.",
+    "Python Backend & Applied AI Engineer building production APIs, AI agents and RAG systems. FastAPI, LangGraph, RAG, Celery, PostgreSQL, Docker, CI/CD.",
   keywords: [
     "Python developer",
+    "Backend engineer",
+    "Applied AI engineer",
+    "AI agents",
+    "LangGraph",
     "FastAPI",
-    "LangChain",
-    "OpenAI",
     "RAG",
     "automation",
-    "data processing",
+    "remote",
     "freelance",
   ],
   authors: [{ name: "Bastian Altamirano" }],
   openGraph: {
-    title: "Bastian Altamirano — Python Backend Developer",
+    title: "Bastian Altamirano — Python Backend & Applied AI Engineer",
     description:
-      "Python Backend Developer building automation, data processing and AI-powered tools.",
+      "Python Backend & Applied AI Engineer building production APIs, AI agents and RAG systems.",
     type: "website",
   },
 };

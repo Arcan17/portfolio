@@ -6,12 +6,12 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const projectMeta = [
   {
-    tech: ["FastAPI","PostgreSQL","Celery","Redis","JWT","RBAC","Alembic","Next.js","TypeScript","pytest","Docker","CI/CD"],
-    github: "https://github.com/Arcan17/integrationops",
-    release: "https://github.com/Arcan17/integrationops",
-    screenshot: "https://raw.githubusercontent.com/Arcan17/integrationops/main/docs/images/dashboard-overview.png",
-    screenshotAlt: "IntegrationOps — dashboard overview showing uploads, jobs, exports and audit logs",
-    badge: "latest",
+    tech: ["LangGraph","FastAPI","Next.js","PostgreSQL","Celery","Redis","SSE","Docker"],
+    github: "https://github.com/Arcan17/agentforge",
+    release: "https://github.com/Arcan17/agentforge",
+    screenshot: "https://raw.githubusercontent.com/Arcan17/agentforge/main/docs/screenshots/01-dashboard.png",
+    screenshotAlt: "AgentForge — multi-agent dashboard showing task pipeline and live events",
+    badge: "featured",
   },
   {
     tech: ["FastAPI","ChromaDB","PostgreSQL","fastembed","spaCy","Railway","Docker"],
@@ -22,12 +22,12 @@ const projectMeta = [
     badge: "LIVE ↗",
   },
   {
-    tech: ["LangGraph","FastAPI","Next.js","PostgreSQL","Celery","Redis","SSE","Docker"],
-    github: "https://github.com/Arcan17/agentforge",
-    release: "https://github.com/Arcan17/agentforge",
-    screenshot: "https://raw.githubusercontent.com/Arcan17/agentforge/main/docs/screenshots/01-dashboard.png",
-    screenshotAlt: "AgentForge — multi-agent dashboard showing task pipeline and live events",
-    badge: "latest",
+    tech: ["FastAPI","PostgreSQL","Celery","Redis","JWT","RBAC","Alembic","Next.js","TypeScript","pytest","Docker","CI/CD"],
+    github: "https://github.com/Arcan17/integrationops",
+    release: "https://github.com/Arcan17/integrationops",
+    screenshot: "https://raw.githubusercontent.com/Arcan17/integrationops/main/docs/images/dashboard-overview.png",
+    screenshotAlt: "IntegrationOps — dashboard overview showing uploads, jobs, exports and audit logs",
+    badge: "featured",
   },
   {
     tech: ["Python","Scrapling","Polars","DuckDB","FastAPI","Streamlit","Docker","CI/CD"],
